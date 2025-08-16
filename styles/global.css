@@ -1,0 +1,69 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* CONTENT */
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse: #030203;
+
+    /* BACKGROUND */
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-gray: #3D3D3D;
+
+    /* ACCENT */
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C0AF;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+
+    /* GRADIENT */
+    --gradient-border: linear-gradient(90deg, #77c0af 0%, 
+                                              #d1dc97 14.84%,
+                                              #e9a9b3 32.15%,
+                                              #d586e0 65.79%,
+                                              #91a1fa 84.58%);
+
+    --gradient-background: linear-gradient(90deg,#d586e0 0%,
+                                                 #91a1fa 98.93%);
+
+    --gradient-content: linear-gradient(90deg, #C7C9CC 0%,
+                                               #3D3D3D 100%);
+
+    /* TIPOGRAFIA */
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    
+    /* font: [weight] [size]/[line-height] [family]; */
+    
+    /* SORA */
+    --ff-sora: "Sora", sans-serif;
+
+    --display-large: var(--fw-extra-bold) 4.5rem/1.3 var(--ff-sora);
+    --display-medium: var(--fw-extra-bold) 2.5rem/1.3 var(--ff-sora);
+    --display-small: var(--fw-bold) 2rem/1.3 var(--ff-sora);
+
+    /* ROBOTO MONO */
+    --ff-roboto-mono: "Roboto Mono", monospace;
+
+    --overline: var(--fw-bold) 1rem/1.5 var(--ff-roboto-mono);
+
+    /* ROBOTO FLEX */
+    --ff-roboto-flex: "Roboto Flex", sans-serif;
+
+    --paragraph-large: var(--fw-medium) 1rem/1.5 var(--ff-roboto-flex);
+    --paragraph-medium: var(--fw-medium) 0.875rem/1.5 var(--ff-roboto-flex);
+    --paragraph-small: var(--fw-medium) 0.75rem/1.5 var(--ff-roboto-flex);
+    --label-medium: var(--fw-bold) 1.25rem/1.5 var(--ff-roboto-flex);
+    --label-small: var(--fw-bold) 1rem/1.5 var(--ff-roboto-flex);
+}
