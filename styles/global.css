@@ -67,3 +67,23 @@
     --label-medium: var(--fw-bold) 1.25rem/1.5 var(--ff-roboto-flex);
     --label-small: var(--fw-bold) 1rem/1.5 var(--ff-roboto-flex);
 }
+
+body {
+  position: relative;
+  height: 100vh;
+  background-image: url(../assets/Shapes.png);
+  background-color: var(--background-primary);
+  
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.75) 100%);
+    z-index: -1;
+}
