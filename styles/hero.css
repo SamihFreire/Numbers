@@ -1,0 +1,25 @@
+.hero {
+    width: 39.3rem;
+    padding-left: 7.5rem;
+    & p {
+        font: var(--overline);
+        
+        /* background: var(--gradient-content); */
+        background-image: var(--gradient-content);
+  
+        /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+        background-clip: text;
+        -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+        /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+        -webkit-text-fill-color: transparent;
+    }
+
+    & h1 {
+        color: var(--content-primary);
+        font: var(--display-large);
+        
+        text-align: justify;
+        text-transform: uppercase;
+    }
+}
