@@ -1,0 +1,115 @@
+.result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-block: 2.125rem;
+
+    & .content {
+        width: 30.125rem;
+        display: grid;
+        gap: 2.5rem;
+
+        & .orientation {
+            & h2 {
+                font: var(--label-medium);
+                color: var(--content-primary);
+            }
+        
+            & p {
+                font: var(--paragraph-large);
+                color: var(--content-secondary);
+            }
+        }
+
+        & form {
+            & .parameters {
+                display: flex;
+                gap: 0.75rem;
+
+                & > div {
+                    display: grid;
+                    gap: 0.5rem;
+                }
+
+                & div span:nth-child(1) {
+                    font: var(--label-small);
+                    color: var(--content-secondary);
+                    text-align: center;
+                }
+    
+                & div:not(.toggle-wrapper) span:nth-child(2){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font: var(--display-small);
+                    color: var(--content-primary);
+                    width: 5.375rem;
+                    height: 3.5rem;
+                    background-color: var(--background-secondary);
+                    border-radius: 0.5rem;
+                }
+
+            }
+            & .toggle-wrapper {
+                display: flex;
+                gap: 0.5rem;
+                margin-block: 1.25rem 2.5rem;
+
+
+                & span{
+                    font: var(--paragraph-small);
+                    color: var(--content-primary);
+                }
+
+                & .switch {
+                    display: inline-block;
+                    height: 1.25rem;
+                    position: relative;
+                    width: 1.875rem;
+                }
+
+                & .switch input {
+                    display:none;
+                }
+
+                & .slider {
+                    background-color: var(--content-tertiary);
+                    bottom: 0;
+                    cursor: pointer;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transition: .4s;
+                }
+
+                & .slider:before {
+                    background-color: #fff;
+                    bottom: 3px;
+                    content: "";
+                    height: 0.875rem;
+                    left: 3px;
+                    position: absolute;
+                    transition: .4s;
+                    width: 0.875rem;
+                }
+
+                & input:checked + .slider {
+                    background: var(--gradient-background);
+                }
+
+                & input:checked + .slider:before {
+                    transform: translateX(10px);
+                }
+
+                & .slider.round {
+                    border-radius: 2.125rem;
+                }
+
+                & .slider.round:before {
+                    border-radius: 50%;
+                }           
+            }
+        }
+    }
+}

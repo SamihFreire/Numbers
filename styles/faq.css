@@ -1,11 +1,11 @@
 .faq {
     width: 39.3rem;
-    padding-left: 7.5rem;
+    /* padding-left: 7.5rem; */
     display: grid;
     gap: 2.25rem;
     margin-top: 2.375rem;
 
-    & div {
+    & .faq-content {
         display: flex;
         align-items: start;
         gap: 0.5rem;
@@ -22,6 +22,7 @@
 
         & .internal-faq {
             display: grid;
+            width: 22.375rem;
         }
     }
 }

@@ -1,9 +1,10 @@
 .hero {
-    width: 39.3rem;
-    padding-left: 7.5rem;
+    width: 31.8rem;
+    /* padding-left: 7.5rem; */
+    
     & p {
         font: var(--overline);
-        
+        margin-bottom: 0.75rem;    
         /* background: var(--gradient-content); */
         background-image: var(--gradient-content);
   

@@ -21,28 +21,74 @@
     </header>
 
     <main>
-        <section class="hero">
-            <p>ONLINE - GRATUITO</p>
-            <h1>Sorteador de Números</h1>
-        </section>
-
-        <section class="faq">
-            <div>
-                <img src="./assets/icons/person-icon.svg" alt="">
-                <div class="internal-faq">
-                    <h2>Como funciona o sorteador de números?</h2>
-                    <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        <div class="content-left">
+            <section class="hero">
+                <p>ONLINE - GRATUITO</p>
+                <h1>Sorteador de Números</h1>
+            </section>
+    
+            <section class="faq">
+                <div class="faq-content">
+                    <img src="./assets/icons/person-icon.svg" alt="">
+                    <div class="internal-faq">
+                        <h2>Como funciona o sorteador de números?</h2>
+                        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div>
-                <img src="./assets/icons/person-icon.svg" alt="">
-                <div class="internal-faq">
-                    <h2>Posso escolher o intervalo dos números?</h2>
-                    <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+    
+                <div class="faq-content">
+                    <img src="./assets/icons/person-icon.svg" alt="">
+                    <div class="internal-faq">
+                        <h2>Posso escolher o intervalo dos números?</h2>
+                        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                    </div>
                 </div>
-            </div>
-        </sction>
+            </section>
+        </div>
+
+        <div class="content-right">
+            <section class="result">
+                <div class="content">
+                    <div class="orientation">
+                        <h2>Quero sortear:</h2>
+                        <p class="subtitle">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                    </div>
+                    
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="parameters">
+                            <div id="box" class="numbers">
+                                <span>NÚMEROS</span>
+                                <span>2</span>
+                            </div>
+
+                            <div id="box" class="from">
+                                <span>DE</span>
+                                <span>1</span>
+                            </div>
+
+                            <div id="box" class="from">
+                                <span>ATÉ</span>
+                                <span>100</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="toggle-wrapper">
+                            <label class="switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" checked />
+                                <div class="slider round"></div>
+                            </label>
+                            <span>Não repetir número</span>
+                        </div>
+
+                        <button class="generate-button" type="submit">
+                            SORTEAR
+                            <img src="./assets/icons/right-arrow-icon.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

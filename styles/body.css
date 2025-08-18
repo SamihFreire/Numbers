@@ -1,6 +1,10 @@
 body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   position: relative;
   height: 100vh;
+  min-width: 68.625rem;
   background-image: url(../assets/Shapes.png);
   background-color: var(--background-primary);
   
@@ -10,6 +14,7 @@ body::after {
     content: "";
     position: absolute;
     inset: 0;
+    height: 100vh;
     background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
