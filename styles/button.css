@@ -1,12 +1,49 @@
+.card {
+    position: relative;
+    --border-width: 1px;
+    padding: var(--border-width);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    
+    & .content {
+        position: relative;
+        background: var(--background-tertiary);
+        border-radius: 0.5rem;
+    }
+
+    & .border {
+        position: absolute;
+        inset: 0;
+        background: var(--background-tertiary);
+    }
+
+    &:hover, &:focus-within {
+        cursor: pointer;
+        & .border::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 200%;
+            min-height: 200%;
+            aspect-ratio: 1/1;
+            background: conic-gradient(from 90deg, #77c0af 0%, 
+                                            #d1dc97 14.84%,
+                                            #e9a9b3 32.15%,
+                                            #d586e0 65.79%,
+                                            #91a1fa 84.58%);
+            transform: translate(-50%, -50%) rotate(0deg);      
+            animation: rotateGradient 1.5s linear infinite;                                  
+        }
+    }
+}
+
 .generate-button {
     all: unset;
-    margin-bottom: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
-    width: 30.125rem;
     height: 3.5rem;
     
     background-color: var(--background-tertiary);
@@ -14,8 +51,10 @@
     
     font: var(--label-medium);
     color: var(--content-primary);
+}
 
-    &:hover, &:focus-within {
-        cursor: pointer;
-    }
+@keyframes rotateGradient {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

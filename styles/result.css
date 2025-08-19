@@ -36,23 +36,48 @@
                     color: var(--content-secondary);
                     text-align: center;
                 }
-    
-                /* & div:not(.toggle-wrapper) span:nth-child(2){ */
-                & input {
-                    all: unset;
-                    text-align: center;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font: var(--display-small);
-                    color: var(--content-primary);
-                    width: 5.375rem;
-                    height: 3.5rem;
-                    background-color: var(--background-secondary);
-                    border-radius: 0.5rem;
-                }
+                & #box {
+                    & input {
+                        all: unset;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font: var(--display-small);
+                        color: var(--content-primary);
+                        width: 5.375rem;
+                        height: 3.375rem;
+                        background: var(--background-secondary);
+                        background-clip: padding-box, border-box;
+                        background-origin: padding-box, border-box;
+                        border: 3px solid var(--background-secondary);
+                        border-radius: 0.5rem;
+                        outline: none;
+                    }
+                    &:hover{
+                        & span {
+                            color: var(--content-brand);
+                        }
+                        
+                        & input {
+                            width: 5.5rem;
+                            height: 3.5rem;
+                            border: 2px solid transparent;
+                            background: linear-gradient(to right, var(--background-secondary)) padding-box,
+                            var(--gradient-border) border-box;
+                        }
+                    }
 
+                    & input:focus{
+                        width: 5.375rem;
+                        height: 3.375rem;
+                        border: 3px solid transparent;
+                        background: linear-gradient(to right, var(--background-secondary), var(--background-secondary)) padding-box,
+                        var(--gradient-border) border-box;
+                    }
+                }
             }
+
             & .toggle-wrapper {
                 display: flex;
                 gap: 0.5rem;
