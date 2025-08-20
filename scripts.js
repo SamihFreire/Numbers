@@ -4,6 +4,11 @@ const fromNumber = document.getElementById("from");
 const toNumber = document.getElementById("to");
 const checkboxRepeat = document.getElementById("checkbox");
 
+const orientation_class = document.querySelector(".orientation")
+const parameters = document.querySelector(".parameters")
+const toggle_wrapper = document.querySelector(".toggle-wrapper")
+const button = document.querySelector(".card")
+
 
 window.addEventListener("input", (event) => {
     if(event.target.name == numbers.name) {
@@ -35,31 +40,34 @@ function checkValues(newParameters) {
 }
 
 form.onsubmit = (event) => {
-    event.preventDefault();
+    try{
+        event.preventDefault();
 
-    const newParameters = {
-        id: new Date().getTime(),
-        numbers: numbers.value,
-        fromNumber: fromNumber.value,
-        toNumber: toNumber.value,
+        const newParameters = {
+            id: new Date().getTime(),
+            numbers: numbers.value,
+            fromNumber: fromNumber.value,
+            toNumber: toNumber.value,
+        }
+
+        let luckyNumbers = drawNumbers(newParameters);
+        
+        showResult(luckyNumbers);
+
+    } catch (error) {
+        alert("Não foi possível realizar o sortéio.");
     }
-
-    drawNumbers(newParameters);
-
 }
 
 function drawNumbers(newParameters) {
-    try {
-        if(checkValues(newParameters)) {
-            let luckyNumbers = [];
 
-            for (let i = 0; i < newParameters.numbers; i++) {
-                luckyNumbers.push(getRandom(newParameters.fromNumber, newParameters.toNumber));
-            }
-            
+    if(checkValues(newParameters)) {
+        let luckyNumbers = [];
+
+        for (let i = 0; i < newParameters.numbers; i++) {
+            luckyNumbers.push(getRandom(newParameters.fromNumber, newParameters.toNumber));
         }
-    } catch (error) {
-        alert("Não foi possível realizar o sortéio.");
+        return luckyNumbers;
     }
 }
 
@@ -67,4 +75,11 @@ function getRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function showResult(luckyNumbers) {
+    orientation_class.remove();
+    parameters.remove();
+    toggle_wrapper.remove();
+    button.remove();
 }

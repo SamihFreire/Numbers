@@ -42,7 +42,7 @@
             }
         }
 
-        & .generate-button img {
+        & .generate-button img[src*="right-arrow-icon"] {
             animation: translateArrow 2s linear infinite;
         }
     }
