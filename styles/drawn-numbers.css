@@ -1,0 +1,109 @@
+.drawn-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin-block: 2.5rem;
+
+    & .drawn-item {
+        position: relative;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 6.25rem;
+        height: 6.25rem;
+        
+        border-radius: 1.75rem;
+        
+        & div {
+            position: relative;
+            font: var(--fw-bold) 3rem/1.5 var(--ff-roboto-mono);
+            color: var(--color-inverse);
+            scale: 0;
+            animation: numbersGrow 4.6s ease forwards;
+        }
+        
+    }
+
+    & .drawn-item::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--content-brand);
+        border-radius: 1.75rem;
+
+        width: 6.25rem;
+        height: 6.25rem;
+        scale: 0;
+        opacity: 0;
+
+        animation: rotatorBackground 3s ease;
+    }
+}
+
+@keyframes rotatorBackground {
+    30% {
+        scale: 1.2;
+        opacity: 1;
+    }
+    
+    40% {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1;
+    }
+    75% {
+        rotate: 180deg;
+    }
+
+    80% {
+        scale: 1;
+        opacity: 1;
+        rotate: 180deg;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
+}
+
+@keyframes numbersGrow {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+    20% {
+        scale: 0;
+        opacity: 1;
+    }
+
+    35% {
+        color: var(--color-inverse);
+        scale: 1.4;
+        opacity: 1;
+    }
+
+    50% {
+        color: var(--color-inverse);
+        scale: 1.4;
+    }
+
+    65% {
+        color: var(--content-brand);
+    }
+
+    70%{
+        scale: 1;
+        color: var(--content-brand);
+    }
+
+    100% {
+        scale: 1;
+        color: var(--content-brand);
+    }
+}
+

@@ -9,16 +9,23 @@
         display: grid;
         gap: 2.5rem;
 
-        & .orientation {
+        & .orientation, & .label-result {
             & h2 {
                 font: var(--label-medium);
                 color: var(--content-primary);
             }
         
             & p {
+                width: 30rem;
                 font: var(--paragraph-large);
                 color: var(--content-secondary);
             }
+        }
+
+        & .label-result {
+            margin-top: 1.562rem;
+            text-transform: uppercase;
+            text-align: center;
         }
 
         & form {
