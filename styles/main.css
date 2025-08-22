@@ -9,4 +9,10 @@ main {
 
         margin-bottom: 5.562rem;
     }
+
+    & .content-left {
+        display: grid;
+        align-content: center;
+
+    }
 }

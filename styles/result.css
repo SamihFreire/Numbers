@@ -1,13 +1,15 @@
 .content-right {
     display: grid;
-    align-items: end;
+    align-items: center;
+    padding-top: 7.5rem;
+    min-height: 33.65rem;
 }
 
 .result {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 24.5rem;
+    max-height: 90vh;
 
     & .content {
         width: 30.125rem;
