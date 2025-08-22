@@ -2,4 +2,11 @@ main {
     display: flex;
     justify-content: center;
     min-width: 68.625rem;
+
+    & #logo-icon {
+        width: 10.75rem;
+        height: 2.375rem;
+
+        margin-bottom: 5.562rem;
+    }
 }

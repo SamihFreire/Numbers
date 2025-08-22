@@ -1,9 +1,13 @@
+.content-right {
+    display: grid;
+    align-items: end;
+}
+
 .result {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-block: 2.125rem;
-    height: 26rem;
+    height: 24.5rem;
 
     & .content {
         width: 30.125rem;

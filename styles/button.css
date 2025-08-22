@@ -4,6 +4,7 @@
     padding: var(--border-width);
     overflow: hidden;
     border-radius: 0.5rem;
+    margin-bottom: 1rem;
     
     & .content {
         position: relative;

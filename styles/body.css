@@ -6,7 +6,7 @@ body {
   height: 100vh;
   min-width: 68.625rem;
   background-image: url(../assets/Shapes.png);
-  background-color: var(--background-primary);
+  background-color: var(--background-primary);  
   
 }
 

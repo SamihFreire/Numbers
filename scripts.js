@@ -57,6 +57,11 @@ form.onsubmit = (event) => {
             toNumber: toNumber.value,
         }
 
+        if(parseInt(fromNumber.value) > parseInt(toNumber.value)) {
+            alert("O primeiro número do sorteio não pode ser maior que o ultimo!")
+            return;
+        }
+
         if(input_checkbox.checked && parseInt(numbers.value) > parseInt(toNumber.value)) {
             alert("A quantidades de números sorteada não pode ser maior que o valor maximo do número de sorteio!")
             return;
