@@ -6,10 +6,11 @@ const fromNumber = document.getElementById("from");
 const toNumber = document.getElementById("to");
 const checkboxRepeat = document.getElementById("checkbox");
 
-const orientation_class = document.querySelector(".orientation")
-const parameters = document.querySelector(".parameters")
-const toggle_wrapper = document.querySelector(".toggle-wrapper")
-const button = document.querySelector(".card")
+const orientation_class = document.querySelector(".orientation");
+const parameters = document.querySelector(".parameters");
+const toggle_wrapper = document.querySelector(".toggle-wrapper");
+const input_checkbox = document.querySelector("#checkbox");
+const button = document.querySelector(".card");
 
 // Elementos cridos após o sorteio
 let buttonCreated;
@@ -43,7 +44,7 @@ function checkValues(newParameters) {
     }else{
         return true;   
     }
-}
+}   
 
 form.onsubmit = (event) => {
     try{
@@ -54,6 +55,11 @@ form.onsubmit = (event) => {
             numbers: numbers.value,
             fromNumber: fromNumber.value,
             toNumber: toNumber.value,
+        }
+
+        if(input_checkbox.checked && parseInt(numbers.value) > parseInt(toNumber.value)) {
+            alert("A quantidades de números sorteada não pode ser maior que o valor maximo do número de sorteio!")
+            return;
         }
 
         let luckyNumbers = drawNumbers(newParameters);
@@ -71,7 +77,13 @@ function drawNumbers(newParameters) {
         let luckyNumbers = [];
 
         for (let i = 0; i < newParameters.numbers; i++) {
-            luckyNumbers.push(getRandom(newParameters.fromNumber, newParameters.toNumber));
+            let luckyValue = getRandom(newParameters.fromNumber, newParameters.toNumber);
+
+            if((input_checkbox.checked && !luckyNumbers.includes(luckyValue)) || !input_checkbox.checked){
+                luckyNumbers.push(luckyValue);
+            }else {
+                i--;
+            }
         }
         return luckyNumbers;
     }
@@ -92,10 +104,15 @@ function showResult(luckyNumbers) {
     }
     else
     {
-        orientation_class.remove();
-        parameters.remove();
-        toggle_wrapper.remove();
-        button.remove();
+        // orientation_class.remove();
+        // parameters.remove();
+        // toggle_wrapper.remove();
+        // button.remove();
+
+        orientation_class.classList.add("occult");
+        parameters.classList.add("occult");
+        toggle_wrapper.classList.add("occult");
+        button.classList.add("occult");
     }
 
     const label_result = document.createElement("div");
@@ -135,11 +152,6 @@ function showResult(luckyNumbers) {
         buttonCreated = createElementButton();
     }, timeEndlucky);
 }
-
-function createElementBox() {
-    
-}
-
 
 function createElementButton() {
     let card = document.createElement("div");
