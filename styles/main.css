@@ -15,4 +15,37 @@ main {
         align-content: center;
 
     }
+
+    & .content-right {
+        display: grid;
+        align-items: center;
+        padding-top: 7.5rem;
+        min-height: 33.65rem;
+    }
+}
+
+
+@media (width < 70.65rem) {
+    main {
+        display: grid;
+        /* margin-top: 2.75rem; */
+        min-width: initial;
+
+        & .content-left {
+            justify-content: center;
+
+            & #logo-icon {
+                display: flex;
+                width: 100%;
+                /* align-items: center;
+                justify-content: center; */
+                margin-block: 2.75rem 2.875rem;
+            }
+        }
+
+        & .content-right {
+            justify-content: center;
+            min-height: initial;
+        }
+    }
 }

@@ -1,28 +1,34 @@
  .faq {
-        width: 39.3rem;
-        /* padding-left: 7.5rem; */
-        display: grid;
-        gap: 2.25rem;
-        margin-top: 2.375rem;
+    width: 39.3rem;
+    /* padding-left: 7.5rem; */
+    display: grid;
+    gap: 2.25rem;
+    margin-top: 2.375rem;
+
+    & .faq-content {
+        display: flex;
+        align-items: start;
+        gap: 0.5rem;
+
+        & h2 {
+            color: var(--content-brand);
+            font: var(--paragraph-medium);
+        }
     
-        & .faq-content {
-            display: flex;
-            align-items: start;
-            gap: 0.5rem;
-    
-            & h2 {
-                color: var(--content-brand);
-                font: var(--paragraph-medium);
-            }
-        
-            & p {
-                color: var(--content-secondary);
-                font: var(--paragraph-small);
-            }
-    
-            & .internal-faq {
-                display: grid;
-                width: 22.375rem;
-            }
+        & p {
+            color: var(--content-secondary);
+            font: var(--paragraph-small);
+        }
+
+        & .internal-faq {
+            display: grid;
+            width: 22.375rem;
         }
     }
+}
+
+@media (width < 70.65rem) {
+    .faq {
+        width: initial;
+    }
+}
