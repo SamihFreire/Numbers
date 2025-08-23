@@ -1,3 +1,14 @@
 .occult {
     display: none !important;
 }
+
+.mobile-only {
+    display: none !important;
+}
+
+@media (width < 70.65rem) {
+    .mobile-only {
+        display: initial !important;
+    }   
+
+}

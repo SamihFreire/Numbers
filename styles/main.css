@@ -46,6 +46,8 @@ main {
         & .content-right {
             justify-content: center;
             min-height: initial;
+
+            padding-top: 2.625rem; 
         }
     }
 }

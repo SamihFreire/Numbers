@@ -148,3 +148,19 @@
         }
     }
 }
+
+@media (width < 70.65rem) {
+    .result {
+        & .content {
+            width: 100%;
+
+            & .orientation, & .label-result {
+                & p {
+                    width: auto;
+                    max-width: 34.733rem;
+                    font: var(--paragraph-medium);
+                }
+            }
+        }
+    }
+}

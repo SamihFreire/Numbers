@@ -30,5 +30,13 @@
 @media (width < 70.65rem) {
     .faq {
         width: initial;
+        & .faq-content {
+            margin-bottom: 2.25rem;
+        }
+        
+    }
+
+    .content-left > .faq {
+        display: none;
     }
 }

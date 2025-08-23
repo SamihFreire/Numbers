@@ -6,8 +6,8 @@ body {
   height: 100vh;
   min-width: 68.625rem;
   background-image: url(../assets/Shapes.png);
-  background-color: var(--background-primary);  
-  
+  background-color: var(--background-primary);
+
 }
 
 body::after {
@@ -15,7 +15,7 @@ body::after {
     position: absolute;
     inset: 0;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.00) 0%, 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.00) 0%,
                                            rgba(0, 0, 0, 0.85) 50%,
                                            rgba(0, 0, 0, 0.55) 60%,
                                            rgba(0, 0, 0, 0.45) 80%,
@@ -28,7 +28,9 @@ body::after {
 
 @media (width < 70.65rem) {
   body {
+    padding-inline: 1.5rem;
     height: initial;
-    min-width: initial;
+    min-width: fit-content;
+    margin-inline: auto;
   }
 }
